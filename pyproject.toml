@@ -1,0 +1,24 @@
+
+[project]
+name = "log-analyzer-cli"
+version = "0.1.0"
+description = "CLI tool to parse logs, compute stats, and generate visualizations"
+authors = [
+  { name = "Anatolii Miroshnyk" }
+]
+requires-python = ">=3.11"
+dependencies = [
+  "typer>=0.12.0",
+  "pandas>=2.0.0",
+  "matplotlib>=3.7.0"
+]
+
+[project.scripts]
+log-analyzer = "log_analyzer.cli:app"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
